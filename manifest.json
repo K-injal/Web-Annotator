@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Web Annotator",
+    "version": "1.0",
+    "description": "Explore the world of Annotation",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "icons/icon128.png"
+      }
+    },
+    "icons": {
+      "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    }
+  }
+  

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Annotator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div id="color-picker">
+      <label for="highlight-color">Set Color:</label>
+      <input type="color" id="highlight-color" name="highlight-color" value="#ffff00">
+    </div>
+    <div id="search-section">
+      <label for="search-annotations">Search</label>
+      <input type="text" id="search-annotations" name="search-annotations" placeholder="Search...">
+    </div>
+    <div class="buttons">
+      <button id="view-annotations"><i class="fas fa-eye"></i> View</button>
+      <button id="export-annotations"><i class="fas fa-download"></i> Export as json</button>
+    </div>
+    <div id="annotations-list" style="display: none;"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
